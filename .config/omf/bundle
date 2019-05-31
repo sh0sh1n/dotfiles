@@ -1,5 +1,6 @@
 package vcs
 package virtualfish
+theme bobthefish
 theme chain
 theme default
 theme eden
