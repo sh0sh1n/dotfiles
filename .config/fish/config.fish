@@ -1,1 +1,1 @@
-eval (python3 -m virtualfish auto_activation projects compat_aliases)
+eval (python3 -m virtualfish auto_activation compat_aliases projects)
