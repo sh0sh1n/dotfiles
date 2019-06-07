@@ -22,13 +22,22 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 Plugin 'ambv/black'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 set encoding=utf-8
-colorscheme gruvbox
+"colorscheme gruvbox
+set background=dark
+colorscheme solarized
+
+" Airline theme
+let g:airline_solarized_bg='dark'
+let g:airline_theme='solarized'
 
 set splitbelow
 set splitright
