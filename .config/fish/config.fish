@@ -5,3 +5,6 @@ fish_vi_key_bindings
 
 # vim default editor
 set -U EDITOR vim
+
+# Enable nerd fonts
+set -g nerd_fonts yes
