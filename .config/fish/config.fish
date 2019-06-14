@@ -15,3 +15,4 @@ set -U EDITOR vim
 # Enable nerd fonts
 set -g nerd_fonts yes
 
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
