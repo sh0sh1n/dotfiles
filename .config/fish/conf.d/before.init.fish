@@ -1,2 +1,3 @@
 set -g VIRTUALFISH_PYTHON "/usr/local/bin/python3"
 set -g VIRTUALFISH_COMPAT_ALIASES 1
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
