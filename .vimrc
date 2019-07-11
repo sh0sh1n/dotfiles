@@ -31,13 +31,13 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 set encoding=utf-8
-"colorscheme gruvbox
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
+"colorscheme solarized
 
 " Airline theme
 let g:airline_solarized_bg='dark'
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 
 set splitbelow
 set splitright
