@@ -16,15 +16,18 @@ Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'morhetz/gruvbox'
 Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdcommenter'
+" Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 Plugin 'ambv/black'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'matchit.zip'
+Plugin 'tpope/vim-repeat'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,13 +75,16 @@ syntax on
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " nerdcommenter
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDAltDelims_java = 1
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDToggleCheckAllLines = 1
+" let g:NERDSpaceDelims = 1
+" let g:NERDCompactSexyComs = 1
+" let g:NERDDefaultAlign = 'left'
+" let g:NERDAltDelims_java = 1
+" let g:NERDCommentEmptyLines = 1
+" let g:NERDTrimTrailingWhitespace = 1
+" let g:NERDToggleCheckAllLines = 1
+
+" ale
+let g:ale_cache_executable_check_failures = 1
 
 set nowrap
 set backspace=indent,eol,start
