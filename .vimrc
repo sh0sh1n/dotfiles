@@ -45,6 +45,9 @@ let g:airline_theme='gruvbox'
 set splitbelow
 set splitright
 
+" Set leader to space
+let mapleader = '<space>'
+
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
