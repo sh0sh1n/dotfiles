@@ -1,3 +1,6 @@
+# set usr/local ahead on path
+set -U fish_user_paths "/usr/local/bin" "/usr/local/sbin" $fish_user_paths
+
 eval (python3 -m virtualfish auto_activation compat_aliases projects)
 
 # enable vi mode
@@ -9,13 +12,14 @@ function fish_user_key_bindings
     end
 end
 
-# vim default editor
-set -U EDITOR vim
+# nvim default editor
+set -U EDITOR nvim
 
 # Enable nerd fonts
 set -g nerd_fonts yes
 
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-
 # virtualenv
 set VIRTUALFISH_DEFAULT_PYTHON "python3"
+
+# rbenv setup
+status --is-interactive; and source (rbenv init -|psub)
