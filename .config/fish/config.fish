@@ -16,7 +16,6 @@ set -U EDITOR vim
 set -g nerd_fonts yes
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-rvm default
 
 # virtualenv
 set VIRTUALFISH_DEFAULT_PYTHON "python3"
