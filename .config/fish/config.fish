@@ -1,6 +1,3 @@
-# set usr/local ahead on path
-set -U fish_user_paths "/usr/local/bin" "/usr/local/sbin" $fish_user_paths
-
 eval (python3 -m virtualfish auto_activation compat_aliases projects)
 
 # enable vi mode
