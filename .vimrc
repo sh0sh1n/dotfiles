@@ -1,46 +1,27 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
+Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'nvie/vim-flake8'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
+Plug 'w0rp/ale'
+Plug 'ambv/black'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-repeat'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'Valloric/YouCompleteMe'
-" Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'morhetz/gruvbox'
-Plugin 'majutsushi/tagbar'
-" Plugin 'scrooloose/nerdcommenter'
-Plugin 'w0rp/ale'
-Plugin 'ambv/black'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'matchit.zip'
-Plugin 'tpope/vim-repeat'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 set encoding=utf-8
 set background=dark
-colorscheme gruvbox
-"colorscheme solarized
-
-" Airline theme
-let g:airline_solarized_bg='dark'
-let g:airline_theme='gruvbox'
+"colorscheme gruvbox
+colorscheme solarized
 
 set splitbelow
 set splitright
@@ -58,31 +39,13 @@ nnoremap <C-H> <C-W><C-H>
 set foldmethod=indent
 set foldlevel=99
 
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_python_binary_path = 'python'
-
 " Status line
 set statusline+=%#warningmsg#
 set statusline+=%*
 
-" Run black on save
-autocmd BufWritePre *.py execute ':Black'
-
-let python_highlight_all=1
 syntax on
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
-" nerdcommenter
-" let g:NERDSpaceDelims = 1
-" let g:NERDCompactSexyComs = 1
-" let g:NERDDefaultAlign = 'left'
-" let g:NERDAltDelims_java = 1
-" let g:NERDCommentEmptyLines = 1
-" let g:NERDTrimTrailingWhitespace = 1
-" let g:NERDToggleCheckAllLines = 1
 
 " ale
 let g:ale_cache_executable_check_failures = 1
