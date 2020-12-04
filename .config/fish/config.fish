@@ -18,3 +18,5 @@ set VIRTUALFISH_DEFAULT_PYTHON "python3"
 
 # rbenv setup
 status --is-interactive; and source (rbenv init -|psub)
+
+set PATH $HOME/.cargo/bin $PATH

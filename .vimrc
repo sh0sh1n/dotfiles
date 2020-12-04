@@ -20,7 +20,6 @@ call plug#end()
 
 set encoding=utf-8
 set background=dark
-"colorscheme gruvbox
 colorscheme solarized
 
 set splitbelow
