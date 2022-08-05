@@ -20,6 +20,3 @@ set VIRTUALFISH_DEFAULT_PYTHON "python3"
 status --is-interactive; and source (rbenv init -|psub)
 
 set PATH $HOME/.cargo/bin $PATH
-
-# fix asdf
-source (brew --prefix asdf)/asdf.fish

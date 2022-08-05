@@ -58,7 +58,7 @@ Plug 'ambv/black'
 " Plug 'Shougo/deoplete-lsp'
 Plug 'ervandew/supertab'
 Plug 'Chiel92/vim-autoformat'
-
+Plug 'christoomey/vim-tmux-navigator'
 
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
