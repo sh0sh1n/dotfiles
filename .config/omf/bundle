@@ -1,5 +1,7 @@
+package fzf
 package vcs
 package virtualfish
+package z
 theme bobthefish
 theme chain
 theme default

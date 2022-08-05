@@ -8,7 +8,7 @@ let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 let g:vim_bootstrap_langs = "c,go,haskell,javascript,python,ruby,rust,scala"
 let g:vim_bootstrap_editor = "nvim"             " nvim or vim
 
-let g:python3_host_prog=expand('/Users/shohanhasan/.local/share/virtualenvs/env_py3-axGROpRK/bin/python3')
+let g:python3_host_prog=expand('~/.virtualenvs/nvim/bin/python')
 
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
@@ -45,14 +45,14 @@ Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'tpope/vim-endwise'
 Plug 'majutsushi/tagbar'
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plug 'ambv/black'
 
 " custom
-Plug 'neoclide/coc.nvim'
 " Plug 'neovim/nvim-lsp'
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'Shougo/deoplete-lsp'
@@ -200,7 +200,7 @@ else
 endif
 
 " autoformat
-au BufWrite * :Autoformat
+" au BufWrite * :Autoformat
 
 " session management
 let g:session_directory = "~/.config/nvim/session"
@@ -428,9 +428,6 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
-" ale
-let g:ale_linters = {}
-
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -557,11 +554,6 @@ augroup go
 
 augroup END
 
-" ale
-:call extend(g:ale_linters, {
-            \"go": ['golint', 'go vet'], })
-
-
 " haskell
 let g:haskell_conceal_wide = 1
 let g:haskell_multiline_strings = 1
@@ -599,9 +591,6 @@ let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
 
-" ale
-:call extend(g:ale_linters, {
-            \'python': ['flake8'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
@@ -712,3 +701,7 @@ else
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = ''
 endif
+
+
+" format on save
+let g:ale_fix_on_save = 1
